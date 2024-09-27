@@ -1,4 +1,4 @@
-package com.Sulai.consoleapp;
+package by.sulai.internship.projects.passwordmanager.console;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

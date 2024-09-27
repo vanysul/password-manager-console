@@ -1,4 +1,4 @@
-package com.Sulai.consoleapp;
+package by.sulai.internship.projects.passwordmanager.console;
 
 /**
  * Hello world!
