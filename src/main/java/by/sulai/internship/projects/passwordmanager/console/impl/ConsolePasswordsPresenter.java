@@ -24,23 +24,4 @@ public class ConsolePasswordsPresenter implements IPasswordsPresenter {
         //todo взаимодействоать с пользователем через консоль
     }
 
-    public void create(IPassword password) {
-        //todo use passwordsService and print into os
-    }
-
-    public void print(Integer id) {
-        //todo use passwordsService and print into os
-    }
-
-    public void print() {
-        //todo use passwordsService and print into os
-    }
-
-    public void update(Integer id, IPassword password) {
-        //todo use passwordsService and print into os
-    }
-
-    public void delete(Integer id) {
-        //todo use passwordsService and print into os
-    }
 }

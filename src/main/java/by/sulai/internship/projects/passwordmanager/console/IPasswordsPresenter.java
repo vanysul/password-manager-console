@@ -7,11 +7,7 @@ public interface IPasswordsPresenter {
      */
     void run();
 
-    void create(IPassword password);
-    void print(Integer id);
-    void print();
-    void update(Integer id, IPassword password);
-    void delete(Integer id);
+
 
 
 }
