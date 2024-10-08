@@ -1,5 +1,6 @@
 package by.sulai.internship.projects.passwordmanager.console.impl;
 
+<<<<<<< HEAD
 import by.sulai.internship.projects.passwordmanager.console.IPassword;
 import by.sulai.internship.projects.passwordmanager.console.IPasswordsDao;
 
@@ -77,3 +78,16 @@ public class PasswordsInCollectionsDao implements IPasswordsDao {
     }
 }
 
+=======
+import by.sulai.internship.projects.passwordmanager.console.IPasswordsDao;
+
+//todo хранилище на коллекциях
+//todo Реализовать методы интерфейса + сингелтон
+public class PasswordsInCollectionsDao implements IPasswordsDao {
+
+    public static final PasswordsInCollectionsDao getInstance(){
+
+        throw new UnsupportedOperationException();
+    }
+}
+>>>>>>> 0cb664dd0dbee241e8a9fb8c69aa4c149e721a7c
