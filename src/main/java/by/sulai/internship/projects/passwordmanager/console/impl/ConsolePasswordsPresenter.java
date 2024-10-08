@@ -4,7 +4,6 @@ import by.sulai.internship.projects.passwordmanager.console.IPassword;
 import by.sulai.internship.projects.passwordmanager.console.IPasswordsPresenter;
 import by.sulai.internship.projects.passwordmanager.console.IPasswordsService;
 
-<<<<<<< HEAD
 import java.util.Scanner;
 import java.util.Set;
 //todo Реализовать методы интерфейса + сингелтон
@@ -21,25 +20,10 @@ public class ConsolePasswordsPresenter implements IPasswordsPresenter {
         return instance;
     }
 
-=======
-
-//todo Реализовать методы интерфейса + сингелтон
-public class ConsolePasswordsPresenter implements IPasswordsPresenter {
-
-    private final IPasswordsService passwordsService;
-
-    //todo
-    public static final IPasswordsPresenter getInstance() {
-        return new ConsolePasswordsPresenter(PasswordsService.getInstance());
-    }
-
-
->>>>>>> 0cb664dd0dbee241e8a9fb8c69aa4c149e721a7c
     public ConsolePasswordsPresenter(IPasswordsService passwordsService) {
         this.passwordsService = passwordsService;
     }
 
-<<<<<<< HEAD
     @Override
     public void run() {
         Scanner scanner = new Scanner(System.in);
@@ -162,10 +146,4 @@ public class ConsolePasswordsPresenter implements IPasswordsPresenter {
             }
         }
     }
-=======
-    public void run() {
-        //todo взаимодействоать с пользователем через консоль
-    }
-
->>>>>>> 0cb664dd0dbee241e8a9fb8c69aa4c149e721a7c
 }

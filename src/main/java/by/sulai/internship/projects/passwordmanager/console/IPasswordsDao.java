@@ -1,5 +1,4 @@
 package by.sulai.internship.projects.passwordmanager.console;
-<<<<<<< HEAD
 import java.util.List;
 //todo определить контракт слоя доступа к данным сущности Password
 public interface IPasswordsDao {
@@ -17,9 +16,4 @@ public interface IPasswordsDao {
     List<IPassword> findPasswordsByUsername(String username);
 
     List<IPassword> findPasswordsByUrl(String url);
-=======
-
-//todo определить контракт слоя доступа к данным сущности Password
-public interface IPasswordsDao {
->>>>>>> 0cb664dd0dbee241e8a9fb8c69aa4c149e721a7c
 }
