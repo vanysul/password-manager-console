@@ -39,8 +39,7 @@ public class ConsolePasswordsPresenter implements IPasswordsPresenter {
             System.out.print("Select an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Поглощаем новую строку
-
+            scanner.nextLine();
             switch (choice) {
                 case 1:
                     addPassword(scanner);
