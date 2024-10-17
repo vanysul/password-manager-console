@@ -9,16 +9,22 @@ import java.util.Optional;
 //todo хранилище на коллекциях
 //todo Реализовать методы интерфейса + сингелтон
 public class PasswordsInCollectionsDao implements IPasswordsDao {
-    private List<IPassword> passwords = new ArrayList<>();
-    private static PasswordsInCollectionsDao instance;
-    private PasswordsInCollectionsDao() {}
+    private static volatile PasswordsInCollectionsDao instance;
+    private List<IPassword> passwords;
+    private PasswordsInCollectionsDao() {
+        passwords = new ArrayList<>();
+    }
+
     public static PasswordsInCollectionsDao getInstance() {
         if (instance == null) {
-            instance = new PasswordsInCollectionsDao();
+            synchronized (PasswordsInCollectionsDao.class) {
+                if (instance == null) {
+                    instance = new PasswordsInCollectionsDao();
+                }
+            }
         }
         return instance;
     }
-
     @Override
     public void createPassword(IPassword password) {
         passwords.add(password);
