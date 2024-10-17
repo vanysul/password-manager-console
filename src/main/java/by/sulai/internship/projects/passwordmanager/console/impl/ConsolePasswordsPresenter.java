@@ -40,6 +40,7 @@ public class ConsolePasswordsPresenter implements IPasswordsPresenter {
 
             int choice = scanner.nextInt();
             scanner.nextLine();
+
             switch (choice) {
                 case 1:
                     addPassword(scanner);

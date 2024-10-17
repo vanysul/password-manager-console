@@ -7,13 +7,18 @@ import java.util.HashSet;
 import java.util.Set;
 //todo Реализовать методы интерфейса + сингелтон
 public class PasswordsService implements IPasswordsService {
-
+private  static  volatile PasswordsService instal ;
     private static PasswordsService instance;
     private Set<IPassword> passwords;
 
     public static PasswordsService getInstance() {
         if (instance == null) {
-            instance = new PasswordsService();
+            synchronized (PasswordsService.class) {
+                if (instal == null) {
+                    instance = new PasswordsService();
+                }
+            }
+
         }
         return instance;
     }
