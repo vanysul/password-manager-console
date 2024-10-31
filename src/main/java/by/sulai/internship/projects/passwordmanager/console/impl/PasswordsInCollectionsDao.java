@@ -16,15 +16,16 @@ public class PasswordsInCollectionsDao implements IPasswordsDao {
     }
 
     public static PasswordsInCollectionsDao getInstance() {
-        if (instance == null) {
+        if (instance == null) {  // Первая проверка (без синхронизации)
             synchronized (PasswordsInCollectionsDao.class) {
-                if (instance == null) {
+                if (instance == null) {  // Вторая проверка (синхронизированная)
                     instance = new PasswordsInCollectionsDao();
                 }
             }
         }
         return instance;
     }
+
     @Override
     public void createPassword(IPassword password) {
         passwords.add(password);
